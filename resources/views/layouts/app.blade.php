@@ -6,7 +6,7 @@
 <head>
     <base href="/public">
     <meta charset="utf-8">
-    <title>Delici - Restaurants HTML Template - Home 01</title>
+    <title>Delici - Restaurants</title>
     <!-- Stylesheets -->
     <link href="{{asset('assets/css/bootstrap.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
@@ -17,6 +17,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link href="{{asset('assets/css/responsive.css')}}" rel="stylesheet">
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+
+    <link href="{{asset('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css')}}"
+        rel="stylesheet">
+
+
+    <style>
+        #waitlistModal label {
+            color: #333 !important;
+        }
+    </style>
+
 
 </head>
 
@@ -79,6 +90,7 @@
     <script src="{{asset('assets/js/wow.js')}}"></script>
     <script src="{{asset('assets/js/parallax.min.js')}}"></script>
     <script src="{{asset('assets/js/custom-script.js')}}"></script>
+    <script src="{{asset('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js')}}"></script>
 </body>
 
 <!-- Mirrored from kalanidhithemes.com/live-preview/landing-page/delici/all-demo/Delici-Defoult/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 May 2025 13:55:28 GMT -->

@@ -1,77 +1,95 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+<!-- Inner Banner Section -->
+<section class="inner-banner">
+    <div class="image-layer" style="background-image: url(assets/images/background/banner-image-4.jpg);"></div>
+    <div class="auto-container">
+        <div class="inner">
+            <div class="subtitle"><span>sign up</span></div>
+            <div class="pattern-image"><img src="assets/images/icons/separator.svg" alt="" title=""></div>
+            <h1><span>Register</span></h1>
+        </div>
+    </div>
+</section>
+<!--End Banner Section -->
+
+<div class="auto-container">
+    <div class="c-page-form-box">
+        <div class="row clearfix">
+            <!--form Section-->
+            <div class="loc-block col-lg-6 col-md-12 col-sm-12">
+                <div class="title-box centered">
+                    <h2>Sign up</h2>
+                    <div class="text desc">Create an account
+                    </div>
+                </div>
+                <div class="default-form reservation-form">
+                    <form action="{{route('create-user')}}" method="POST">
                         @csrf
+                        <div class="clearfix">
+                            <div class="form-group">
+                                <div class="text-left">
+                                    <label class="label-title text-start">Name *</label>
+                                    <input name="name" value="{{ old('name') }}" class="form-control"
+                                        placeholder="Your Username" type="text">
+                                    @error('name')
+                                    <span class="text-danger" style="font-size: 10px;">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="text-left">
+                                    <label class="label-title">Email address *</label>
+                                    <input name="email" value="{{ old('email') }}" class="form-control"
+                                        placeholder="Your Email address" type="email">
+                                    @error('email')
+                                    <span class="text-danger" style="font-size: 10px;">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="text-left">
+                                    <label class="label-title">Password *</label>
+                                    <input name="password" value="{{ old('password') }}" class="form-control "
+                                        placeholder="Type Password" type="password">
+                                    @error('password')
+                                    <span class="text-danger" style="font-size: 10px;">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
 
-                        <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
+                            <div class="form-group ">
+                                <div class="text-left">
+                                    <label class="label-title">Confirm Password *</label>
+                                    <input name="confirm_password" value="{{ old('confirm_password') }}"
+                                        class="form-control " placeholder="Type Password" type="password">
+                                    @error('confirm_password')
+                                    <span class="text-danger" style="font-size: 10px;">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                            <div class="form-group">
+                                <button type="submit" class="theme-btn btn-style-one clearfix">
+                                    <span class="btn-wrap">
+                                        <span class="text-one">register</span>
+                                        <span class="text-two">register</span>
                                     </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
                                 </button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
+
+            <!--form image Section-->
+            <div class="loc-block col-lg-6 col-md-12 col-sm-12">
+                <img src="assets/images/resource/restaurant.png" alt="">
+            </div>
         </div>
     </div>
 </div>
+
 @endsection

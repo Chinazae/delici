@@ -214,8 +214,7 @@
             <div class="subtitle"><span>Flavors for royalty</span></div>
             <div class="pattern-image"><img src="assets/images/icons/separator.svg" alt="" title=""></div>
             <h2>We Offer Top Notch</h2>
-            <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem
-                Ipsum has been the industrys standard dummy text ever.</div>
+            <div class="text">Experience amazing food that will make you come back for more</div>
         </div>
         <div class="row justify-content-center clearfix">
             <!--Block-->
@@ -265,10 +264,8 @@
                         <div class="pattern-image"><img src="assets/images/icons/separator.svg" alt="" title="">
                         </div>
                         <h2>Every Flavor Tells a Story</h2>
-                        <div class="text">Lorem Ipsum is simply dummy text of the printingand typesetting
-                            industry lorem Ipsum has been the industrys standard dummy text ever since the when
-                            an unknown printer took a galley of type and scrambled it to make a type specimen
-                            book It has survived not only five centuries, but also the leap into.</div>
+                        <div class="text">Flavor and savory taste. Delici is one of the best in the industry. Reserve,
+                            enjoy and relax</div>
                     </div>
                     <div class="booking-info">
                         <div class="bk-title">Book Through Call</div>
@@ -326,11 +323,9 @@
                         <div class="pattern-image"><img src="assets/images/icons/separator.svg" alt="" title="">
                         </div>
                         <h2>Lobster Tortellini</h2>
-                        <div class="text">Lorem Ipsum is simply dummy text of the printingand typesetting
-                            industry lorem Ipsum has been the industrys standard dummy text ever since the when
-                            an unknown printer took a galley of type.</div>
+                        <div class="text">Amazing food from the finest high-skilled chefs</div>
                     </div>
-                    <div class="price"><span class="old">$40.00</span> <span class="new">$20.00</span></div>
+                    <div class="price"><span class="old">N40,000</span> <span class="new">N20,000</span></div>
                     <div class="link-box">
                         <a href="menu-list-1.html" class="theme-btn btn-style-two clearfix">
                             <span class="btn-wrap">
@@ -415,10 +410,9 @@
                                             <div class="ttl clearfix">
                                                 <h5><a href="#">Butternut Pumpkin</a></h5>
                                             </div>
-                                            <div class="price"><span>$10.00</span></div>
+                                            <div class="price"><span>N10,000</span></div>
                                         </div>
-                                        <div class="text desc"><a href="#">Typesetting industry lorem Lorem
-                                                Ipsum is simply dummy text of the priand.</a></div>
+                                        <div class="text desc"><a href="#">Tasty and finely prepared</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -526,10 +520,9 @@
                                             <div class="ttl clearfix">
                                                 <h5><a href="#">Butternut Pumpkin</a></h5>
                                             </div>
-                                            <div class="price"><span>$10.00</span></div>
+                                            <div class="price"><span>N10,000</span></div>
                                         </div>
-                                        <div class="text desc"><a href="#">Typesetting industry lorem Lorem
-                                                Ipsum is simply dummy text of the priand.</a></div>
+                                        <div class="text desc"><a href="#">Tasty and finely prepared.</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -998,6 +991,7 @@
                             dinner the other night. The food was extraordinary.</div>
                     </div>
                 </div>
+
             </div>
             <div class="separator"><span></span><span></span><span></span></div>
             <div class="thumbs-carousel-box">
@@ -1028,7 +1022,30 @@
                     </div>
                 </div>
             </div>
+            {{-- <a href="{{route('reviews.public')}}" class="btn fw-bold" style="
+    background-color: #D4AF37;
+    color: white;
+    border: none;
+    padding: 12px 70px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+" onmouseover="this.style.backgroundColor='#B8860B'" onmouseout="this.style.backgroundColor='#D4AF37'">
+                Reviews
+            </a> --}}
+
+            <div class="links-box clearfix">
+                <div class="link">
+                    <a href="{{route('reviews.public')}}" class="theme-btn btn-style-two clearfix">
+                        <span class="btn-wrap">
+                            <span class="text-one">reviews</span>
+                            <span class="text-two">reviews</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
         </div>
+
     </div>
 </section>
 
@@ -1246,6 +1263,9 @@
                                 <h3>Upcoming Events</h3>
                                 <div class="text">Simply dummy printing and setting.</div>
                                 <div class="link"><a href="menu-list-2.html" class="theme-btn"><span>join
+                                            event</span></a></div>
+                                <div class="link"><a href="{{route('event_bookings.create')}}"
+                                        class="theme-btn"><span>book an
                                             event</span></a></div>
                             </div>
                         </div>
@@ -1488,7 +1508,7 @@
         </div>
 
         <div class="lower-link-box text-center">
-            <a href="#" class="theme-btn btn-style-two clearfix">
+            <a href="{{ route('blog.show') }}" class="theme-btn btn-style-two clearfix">
                 <span class="btn-wrap">
                     <span class="text-one">view our blog</span>
                     <span class="text-two">view our blog</span>
